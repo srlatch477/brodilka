@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Brodilka.dir/objects.a
+C:\msys64\mingw32\bin\ar.exe qc CMakeFiles\Brodilka.dir/objects.a @CMakeFiles\Brodilka.dir\objects1.rsp
+C:\msys64\mingw32\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\Brodilka.dir/objects.a -Wl,--no-whole-archive -o Brodilka.exe -Wl,--out-implib,libBrodilka.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Brodilka.dir\linkLibs.rsp

@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/MaksFX/Desktop/brodilka/build",
+  "command": "C:\\msys64\\mingw32\\bin\\gcc.exe   -g -mwindows -o CMakeFiles\\Brodilka.dir\\src\\main.c.obj -c C:\\Users\\MaksFX\\Desktop\\brodilka\\src\\main.c",
+  "file": "C:/Users/MaksFX/Desktop/brodilka/src/main.c",
+  "output": "CMakeFiles/Brodilka.dir/src/main.c.obj"
+},
+{
+  "directory": "C:/Users/MaksFX/Desktop/brodilka/build",
+  "command": "C:\\msys64\\mingw32\\bin\\gcc.exe   -g -mwindows -o CMakeFiles\\Brodilka.dir\\src\\print.c.obj -c C:\\Users\\MaksFX\\Desktop\\brodilka\\src\\print.c",
+  "file": "C:/Users/MaksFX/Desktop/brodilka/src/print.c",
+  "output": "CMakeFiles/Brodilka.dir/src/print.c.obj"
+},
+{
+  "directory": "C:/Users/MaksFX/Desktop/brodilka/build",
+  "command": "C:\\msys64\\mingw32\\bin\\gcc.exe   -g -mwindows -o CMakeFiles\\Brodilka.dir\\src\\rendering.c.obj -c C:\\Users\\MaksFX\\Desktop\\brodilka\\src\\rendering.c",
+  "file": "C:/Users/MaksFX/Desktop/brodilka/src/rendering.c",
+  "output": "CMakeFiles/Brodilka.dir/src/rendering.c.obj"
+}
+]

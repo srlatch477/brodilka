@@ -1,0 +1,3 @@
+C:/Users/MaksFX/Desktop/brodilka/build/CMakeFiles/Brodilka.dir
+C:/Users/MaksFX/Desktop/brodilka/build/CMakeFiles/edit_cache.dir
+C:/Users/MaksFX/Desktop/brodilka/build/CMakeFiles/rebuild_cache.dir
