@@ -21,7 +21,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     wc.lpfnWndProc = WndProc;
     wc.hInstance = hInstance;
     wc.lpszClassName = className;
-    wc.hbrBackground = (HBRUSH) (COLOR_WINDOW + 1);
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);
     
     RegisterClass(&wc);
@@ -52,14 +51,27 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     HDC hdc = GetWindowDC(hwnd);
 
-    HICON ico = LoadIcon(NULL, IDI_APPLICATION);
+    initRendering(hwnd);
+
+    LARGE_INTEGER previousTime;
+    LARGE_INTEGER frequency;
+
+    float deltaTime;
+
+    QueryPerformanceCounter(&previousTime);
+    QueryPerformanceFrequency(&frequency);
 
     while (GetMessage(&msg, NULL, 0, 0)) {
         TranslateMessage(&msg);
 
-        render(&hdc);
+        LARGE_INTEGER currentTime;
+        QueryPerformanceCounter(&currentTime);
 
-        DrawIcon(hdc, 20, 20, ico);
+        deltaTime = currentTime.QuadPart - previousTime.QuadPart / frequency.QuadPart;
+
+        float fps = 1.0f / deltaTime;
+
+        render(hdc, (int)fps);
 
         UpdateWindow(hwnd);
 

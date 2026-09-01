@@ -1,8 +1,26 @@
 #include "rendering.h"
 #include <Windows.h>
 
-void render(HDC* hdc) {
-    HBRUSH brush = CreateSolidBrush(RGB(255, 0, 0));
-    RECT rect = {0, 0, 100, 100};
-    FillRect(*hdc, &rect, brush);
+HBRUSH bgBrush;
+HWND window;
+
+void initRendering(HWND hwnd) {
+    bgBrush = CreateSolidBrush(RGB(0, 100, 95));
+    window = hwnd;
+}
+
+void clear(HDC hdc) {
+    RECT rect;
+    GetClientRect(window, &rect);
+    FillRect(hdc, &rect, bgBrush);
+    
+}
+
+void render(HDC hdc, int fps) {
+    clear(hdc);
+
+    char fpsString[8];
+    wsprintf(fpsString, "FPS: %d", fps);
+
+    TextOut(hdc, 100, 100, fpsString, strlen(fpsString));
 }
